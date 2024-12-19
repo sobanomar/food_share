@@ -40,6 +40,7 @@ import Dashboard from "layouts/dashboard";
 
 // @mui icons
 import Icon from "@mui/material/Icon";
+import { Typography } from "@mui/material";
 
 const routes = [
   {
@@ -56,7 +57,11 @@ const routes = [
     key: "partner-sites",
     icon: <Icon fontSize="small">store</Icon>,
     route: "/partner-sites",
-    component: null, // Temporarily not defined
+    component: (
+      <Typography marginLeft={"280px"} marginTop={"10px"}>
+        Partner Sites Page
+      </Typography>
+    ), // Temporarily not defined
   },
   {
     type: "collapse",
@@ -64,7 +69,11 @@ const routes = [
     key: "orders",
     icon: <Icon fontSize="small">shopping_cart</Icon>,
     route: "/orders",
-    component: null, // Temporarily not defined
+    component: (
+      <Typography marginLeft={"280px"} marginTop={"10px"}>
+        Orders Page
+      </Typography>
+    ), // Temporarily not defined
   },
   {
     type: "collapse",
@@ -72,7 +81,11 @@ const routes = [
     key: "incomplete-orders",
     icon: <Icon fontSize="small">assignment_late</Icon>,
     route: "/incomplete-orders",
-    component: null, // Temporarily not defined
+    component: (
+      <Typography marginLeft={"280px"} marginTop={"10px"}>
+        Incomplete Orders Page
+      </Typography>
+    ), // Temporarily not defined
   },
   {
     type: "collapse",
@@ -80,7 +93,11 @@ const routes = [
     key: "produce",
     icon: <Icon fontSize="small">local_grocery_store</Icon>,
     route: "/produce",
-    component: null, // Temporarily not defined
+    component: (
+      <Typography marginLeft={"280px"} marginTop={"10px"}>
+        Produce Page
+      </Typography>
+    ), // Temporarily not defined
   },
   {
     type: "collapse",
@@ -88,7 +105,11 @@ const routes = [
     key: "supplier",
     icon: <Icon fontSize="small">inventory</Icon>,
     route: "/supplier",
-    component: null, // Temporarily not defined
+    component: (
+      <Typography marginLeft={"280px"} marginTop={"10px"}>
+        Supplier Page
+      </Typography>
+    ), // Temporarily not defined
   },
   {
     type: "collapse",
@@ -96,7 +117,11 @@ const routes = [
     key: "customers",
     icon: <Icon fontSize="small">group</Icon>,
     route: "/customers",
-    component: null, // Temporarily not defined
+    component: (
+      <Typography marginLeft={"280px"} marginTop={"10px"}>
+        Customers Page
+      </Typography>
+    ), // Temporarily not defined
   },
   {
     type: "collapse",
@@ -104,7 +129,11 @@ const routes = [
     key: "funders",
     icon: <Icon fontSize="small">people_alt</Icon>,
     route: "/funders",
-    component: null, // Temporarily not defined
+    component: (
+      <Typography marginLeft={"280px"} marginTop={"10px"}>
+        Funders Page
+      </Typography>
+    ), // Temporarily not defined
   },
   {
     type: "collapse",
@@ -112,7 +141,11 @@ const routes = [
     key: "unpaid-preorders",
     icon: <Icon fontSize="small">credit_card_off</Icon>,
     route: "/unpaid-preorders",
-    component: null, // Temporarily not defined
+    component: (
+      <Typography marginLeft={"280px"} marginTop={"10px"}>
+        Unpaid Preorders Page
+      </Typography>
+    ), // Temporarily not defined
   },
   {
     type: "collapse",
@@ -120,7 +153,11 @@ const routes = [
     key: "calendar",
     icon: <Icon fontSize="small">calendar_today</Icon>,
     route: "/calendar",
-    component: null, // Temporarily not defined
+    component: (
+      <Typography marginLeft={"280px"} marginTop={"10px"}>
+        Calendar Page
+      </Typography>
+    ), // Temporarily not defined
   },
   {
     type: "collapse",
@@ -128,7 +165,11 @@ const routes = [
     key: "personnel-drivers",
     icon: <Icon fontSize="small">engineering</Icon>,
     route: "/personnel-drivers",
-    component: null, // Temporarily not defined
+    component: (
+      <Typography marginLeft={"280px"} marginTop={"10px"}>
+        Personnel / Drivers Page
+      </Typography>
+    ), // Temporarily not defined
   },
   {
     type: "collapse",
@@ -136,7 +177,11 @@ const routes = [
     key: "driver-delivery",
     icon: <Icon fontSize="small">local_shipping</Icon>,
     route: "/driver-delivery",
-    component: null, // Temporarily not defined
+    component: (
+      <Typography marginLeft={"280px"} marginTop={"10px"}>
+        Driver Delivery Page
+      </Typography>
+    ), // Temporarily not defined
   },
   {
     type: "collapse",
@@ -144,7 +189,11 @@ const routes = [
     key: "funds",
     icon: <Icon fontSize="small">attach_money</Icon>,
     route: "/funds",
-    component: null, // Temporarily not defined
+    component: (
+      <Typography marginLeft={"280px"} marginTop={"10px"}>
+        Funds Page
+      </Typography>
+    ), // Temporarily not defined
   },
   {
     type: "collapse",
@@ -152,7 +201,11 @@ const routes = [
     key: "empty-box-management",
     icon: <Icon fontSize="small">inventory_2</Icon>,
     route: "/empty-box-management",
-    component: null, // Temporarily not defined
+    component: (
+      <Typography marginLeft={"280px"} marginTop={"10px"}>
+        Empty Box Management Page
+      </Typography>
+    ), // Temporarily not defined
   },
 ];
 

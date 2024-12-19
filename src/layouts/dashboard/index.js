@@ -1,4 +1,3 @@
-
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography"; // Import Typography
 // Material Dashboard 2 React components
@@ -19,6 +18,12 @@ import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
 // Dashboard components
 import Projects from "layouts/dashboard/components/Projects";
 import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import { CreditCard } from "@mui/icons-material";
+import PieChart from "examples/Charts/PieChart";
+import pieChartData from "./data/pieChartData";
+import pieData from "./data/pieChartData";
+import { Box } from "@mui/material";
 
 function Dashboard() {
   const { sales, tasks } = reportsLineChartData;
@@ -29,16 +34,37 @@ function Dashboard() {
     day: "numeric",
   });
 
+  const iconProps = {
+    color: "success",
+    component: "pie_chart",
+  };
+
   return (
     <DashboardLayout>
       <DashboardNavbar />
+      <Box
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          backgroundColor: "#f9f9f9",
+          padding: "4px 8px",
+          marginBottom: "10px",
+          borderRadius: "8px",
+          boxShadow: "0 0px 8px rgba(0, 0, 0, 0.1)",
+        }}
+      >
+        <Typography style={{ fontWeight: "bold", fontSize: "15px", marginRight: "4px" }}>
+          Box Date:
+        </Typography>
+        <Typography style={{ fontSize: "15px", color: "#555" }}>Dec 19, 2024</Typography>
+      </Box>
       <MDBox py={3}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={6} lg={3}>
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
                 color="dark"
-                icon="weekend"
+                icon="attach_money"
                 title="Cash"
                 count={`$${210}`}
                 percentage={{
@@ -58,7 +84,7 @@ function Dashboard() {
           <Grid item xs={12} md={6} lg={3}>
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
-                icon="leaderboard"
+                icon="flatware"
                 title="SNAP"
                 count={`$${880}`}
                 percentage={{
@@ -79,7 +105,7 @@ function Dashboard() {
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
                 color="success"
-                icon="store"
+                icon={"credit_card"}
                 title="Credit Card"
                 count={`$${720}`}
                 percentage={{
@@ -100,7 +126,7 @@ function Dashboard() {
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
                 color="primary"
-                icon="person_add"
+                icon="grain"
                 title="Others"
                 count={`$${640}`}
                 percentage={{
@@ -120,18 +146,7 @@ function Dashboard() {
         </Grid>
         <MDBox mt={4.5}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={4}>
-              <MDBox mb={3}>
-                <ReportsBarChart
-                  color="info"
-                  title="Order by Partner Site"
-                  description="Last Campaign Performance"
-                  date="campaign sent 2 days ago"
-                  chart={reportsBarChartData}
-                />
-              </MDBox>
-            </Grid>
-            <Grid item xs={12} md={6} lg={4}>
+            <Grid item xs={12} md={6} lg={6}>
               <MDBox mb={3}>
                 <ReportsLineChart
                   color="success"
@@ -146,7 +161,7 @@ function Dashboard() {
                 />
               </MDBox>
             </Grid>
-            <Grid item xs={12} md={6} lg={4}>
+            <Grid item xs={12} md={6} lg={6}>
               <MDBox mb={3}>
                 <ReportsLineChart
                   color="dark"
@@ -154,6 +169,23 @@ function Dashboard() {
                   description="Last Campaign Performance"
                   date="just updated"
                   chart={tasks}
+                />
+              </MDBox>
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <MDBox mb={3}>
+                {/* <ReportsBarChart
+                  color="info"
+                  title="Order by Partner Site"
+                  description="Last Campaign Performance"
+                  date="campaign sent 2 days ago"
+                  chart={reportsBarChartData}
+                /> */}
+                <PieChart
+                  icon={iconProps}
+                  title="Sales Distribution"
+                  description="Distribution of sales across different regions."
+                  chart={pieData}
                 />
               </MDBox>
             </Grid>
