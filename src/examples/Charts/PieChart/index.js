@@ -117,7 +117,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 // export default PieChart;
 
-function PieChart({ icon, title, description, height, chart }) {
+function PieChart({ icon, title, description, height, width, chart }) {
   const data = {
     labels: chart.labels || [],
     datasets: chart.datasets || [],
@@ -166,8 +166,17 @@ function PieChart({ icon, title, description, height, chart }) {
         </MDBox>
       </MDBox>
 
-      <Box>
-        <Pie data={data} options={options} />
+      <Box
+        style={{
+          display: "flex", // Add flex display
+          justifyContent: "center", // Center horizontally
+          alignItems: "center", // Center vertically
+          height: "100%", // Ensure the outer box has height for vertical centering
+        }}
+      >
+        <Box style={{ height, width }}>
+          <Pie data={data} options={options} />
+        </Box>
       </Box>
     </Card>
   );

@@ -19,7 +19,7 @@ import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
 import Projects from "layouts/dashboard/components/Projects";
 import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
-import { CreditCard } from "@mui/icons-material";
+import { CreditCard, WidthFull } from "@mui/icons-material";
 import PieChart from "examples/Charts/PieChart";
 import pieChartData from "./data/pieChartData";
 import pieData from "./data/pieChartData";
@@ -183,9 +183,11 @@ function Dashboard() {
                 /> */}
                 <PieChart
                   icon={iconProps}
-                  title="Sales Distribution"
-                  description="Distribution of sales across different regions."
+                  title="Boxes Shippment"
+                  description="Total Box Orders: 110"
                   chart={pieData}
+                  width={window.innerWidth >= 768 ? 400 : 250}
+                  height={window.innerWidth >= 768 ? 400 : 250}
                 />
               </MDBox>
             </Grid>
